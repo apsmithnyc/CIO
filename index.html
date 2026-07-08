@@ -229,47 +229,45 @@
     margin-bottom:14px;
   }
 
-  .cs-title{
-    font-size:21px;
-    font-weight:700;
-    letter-spacing:-0.01em;
-    line-height:1.32;
-    color:var(--text-dark);
+  .cs-quote{
     margin:0 0 22px;
-    max-width:520px;
+    padding-left:18px;
+    border-left:3px solid var(--accent);
   }
 
-  .cs-stats{
-    display:flex;
+  .cs-quote p{
+    font-size:16.5px;
+    font-style:italic;
+    color:var(--text-dark);
+    line-height:1.55;
+    margin:0 0 10px;
+  }
+
+  .cs-quote cite{
+    display:block;
+    font-style:normal;
+    font-size:13px;
+    color:var(--text-muted);
+  }
+
+  .cs-stat-single{
+    padding:18px 0;
     border-top:1px dashed var(--line-light);
     border-bottom:1px dashed var(--line-light);
-    padding:20px 0;
     margin-bottom:18px;
   }
 
-  .cs-stat{
-    flex:1;
-    padding:0 20px;
-  }
-
-  .cs-stat:first-child{ padding-left:0; }
-
-  .cs-stat:not(:first-child){
-    border-left:1px dashed var(--line-light);
-  }
-
-  .cs-stat-num{
-    font-size:25px;
+  .cs-stat-single .cs-stat-num{
+    font-size:30px;
     font-weight:800;
     letter-spacing:-0.01em;
     color:var(--text-dark);
-    margin-bottom:6px;
+    margin-bottom:4px;
   }
 
-  .cs-stat-label{
-    font-size:12.5px;
+  .cs-stat-single .cs-stat-label{
+    font-size:13px;
     color:var(--text-muted);
-    line-height:1.45;
   }
 
   .cs-link{
@@ -353,9 +351,7 @@
     .block{ padding:48px 0; }
     .lead{ font-size:22px; }
     .case-study{ padding:22px 20px 20px; }
-    .cs-stats{ flex-direction:column; border-top:1px dashed var(--line-light); border-bottom:none; padding:16px 0 0; }
-    .cs-stat{ padding:0 0 16px !important; border-left:none !important; border-bottom:1px dashed var(--line-light); }
-    .cs-stat:last-child{ border-bottom:none; padding-bottom:0 !important; }
+    .cs-stat-single .cs-stat-num{ font-size:26px; }
     .footer{ padding:40px 24px 28px; }
     .footer-inner{ justify-content:flex-start; }
     .footer-statement{ font-size:18px; }
@@ -441,23 +437,16 @@
       <p class="body-text">For a CIO, that&rsquo;s an opening conversation on Enterprise Pharmacy Intelligence with the CPO and CFO. Visible, enterprise-level collaboration builds strategic credibility faster than any roadmap.</p>
 
       <div class="case-study">
-        <span class="mono cs-eyebrow">CASE STUDY · METROHEALTH</span>
-        <h3 class="cs-title">Latent boosts MetroHealth&rsquo;s efficiency by 45%</h3>
-        <div class="cs-stats">
-          <div class="cs-stat">
-            <div class="cs-stat-num">45.1%</div>
-            <div class="cs-stat-label">Increase in PA submission capacity without adding headcount</div>
-          </div>
-          <div class="cs-stat">
-            <div class="cs-stat-num">2.03 hrs</div>
-            <div class="cs-stat-label">Average turnaround time for prior authorizations</div>
-          </div>
-          <div class="cs-stat">
-            <div class="cs-stat-num">&lt;3 min</div>
-            <div class="cs-stat-label">Average time for clinical document creation and review</div>
-          </div>
+        <span class="mono cs-eyebrow">CASE STUDY · YALE NEW HAVEN HEALTH</span>
+        <blockquote class="cs-quote">
+          <p>&ldquo;Health systems talk about infrastructure like bridges and tunnels&mdash;we need the same mindset for technology. Latent supports critical infrastructure behind the scenes so our people can focus on patients.&rdquo;</p>
+          <cite>Marjorie Lazarre, Chief Pharmacy Officer</cite>
+        </blockquote>
+        <div class="cs-stat-single">
+          <div class="cs-stat-num">109%</div>
+          <div class="cs-stat-label">Increase in PA throughput per team member</div>
         </div>
-        <a class="cs-link" href="https://latenthealth.com/case-study/metro-case-study-2025">Read the case study <span aria-hidden="true">&rarr;</span></a>
+        <a class="cs-link" href="https://latenthealth.com/case-study/ynhh-cs-2025-1">Read the case study <span aria-hidden="true">&rarr;</span></a>
       </div>
     </section>
 
@@ -470,23 +459,16 @@
       <p class="body-text">The CIOs building credibility right now are the ones pointing to pharmacy, specialty, and ambulatory expansion as revenue partners. Leveraging Enterprise Pharmacy Intelligence with proven ROI transforms a cost center into a revenue generator. Now you&rsquo;re not just implementing AI, you have demonstrable enterprise AI ROI tied to hard financial metrics: cost avoidance, new revenue capture, reduced denials/throughput gains, not just efficiency or soft returns like &ldquo;time saved.&rdquo;</p>
 
       <div class="case-study">
-        <span class="mono cs-eyebrow">CASE STUDY · OCHSNER HEALTH</span>
-        <h3 class="cs-title">How Ochsner and Latent are using AI to fight denied authorizations, and win</h3>
-        <div class="cs-stats">
-          <div class="cs-stat">
-            <div class="cs-stat-num">7.2 min</div>
-            <div class="cs-stat-label">Time per appeal with Latent</div>
-          </div>
-          <div class="cs-stat">
-            <div class="cs-stat-num">75&ndash;80%</div>
-            <div class="cs-stat-label">Time reduction per appeal</div>
-          </div>
-          <div class="cs-stat">
-            <div class="cs-stat-num">~35 hrs</div>
-            <div class="cs-stat-label">Time saved across 90 appeals</div>
-          </div>
+        <span class="mono cs-eyebrow">CASE STUDY · ST. LUKE&rsquo;S HEALTH SYSTEM</span>
+        <blockquote class="cs-quote">
+          <p>&ldquo;A year ago, our workqueue was around 2,300 referrals. Today, it&rsquo;s below 800. More importantly, we&rsquo;ve moved from reacting to volume to operating with capacity, sustainability, and the ability to support patients earlier in their prescription journey.&rdquo;</p>
+          <cite>Carla Loessi, Pharmacy Business Director, Medication Access Team</cite>
+        </blockquote>
+        <div class="cs-stat-single">
+          <div class="cs-stat-num">+1,200</div>
+          <div class="cs-stat-label">Added PA capacity per month with same FTE base</div>
         </div>
-        <a class="cs-link" href="https://latenthealth.com/case-study/ochsner-latent-appeal">Read the case study <span aria-hidden="true">&rarr;</span></a>
+        <a class="cs-link" href="https://latenthealth.com/case-study/latent-health-st-lukes-health-system">Read the case study <span aria-hidden="true">&rarr;</span></a>
       </div>
     </section>
 
@@ -495,27 +477,20 @@
         <span class="block-num">03</span>
         <span class="mono block-eyebrow">GOVERNANCE AT SCALE</span>
       </div>
-      <p class="lead">Enterprise Pharmacy Intelligence also bridges clinical strategy with business strategy.</p>
+      <p class="lead">Enterprise Pharmacy Intelligence bridges clinical strategy with business strategy.</p>
       <p class="body-text">Your technology targets priorities across the organization. As CIO you are charged with AI governance, even when individual departments adopt point solutions. Scaling AI responsibility, with a platform system, is the best approach to disciplined governance.</p>
 
       <div class="case-study">
-        <span class="mono cs-eyebrow">CASE STUDY · ST. LUKE&rsquo;S HEALTH SYSTEM</span>
-        <h3 class="cs-title">How St. Luke&rsquo;s turned medication access into a strategic advantage</h3>
-        <div class="cs-stats">
-          <div class="cs-stat">
-            <div class="cs-stat-num">&minus;57%</div>
-            <div class="cs-stat-label">Decrease in PA turnaround time</div>
-          </div>
-          <div class="cs-stat">
-            <div class="cs-stat-num">&minus;72%</div>
-            <div class="cs-stat-label">Decrease in average PA review time</div>
-          </div>
-          <div class="cs-stat">
-            <div class="cs-stat-num">+1,200</div>
-            <div class="cs-stat-label">Added PA capacity per month with same FTE base</div>
-          </div>
+        <span class="mono cs-eyebrow">CASE STUDY · OCHSNER HEALTH</span>
+        <blockquote class="cs-quote">
+          <p>&ldquo;AI is helping us reclaim time&mdash;reducing the time needed to draft an appeal by 80% so our teams can spend more of their time where it counts: with patients.&rdquo;</p>
+          <cite>Debbie Simonson, Chief Pharmacy Officer</cite>
+        </blockquote>
+        <div class="cs-stat-single">
+          <div class="cs-stat-num">75&ndash;80%</div>
+          <div class="cs-stat-label">Time reduction per appeal</div>
         </div>
-        <a class="cs-link" href="https://latenthealth.com/case-study/latent-health-st-lukes-health-system">Read the case study <span aria-hidden="true">&rarr;</span></a>
+        <a class="cs-link" href="https://latenthealth.com/case-study/ochsner-latent-appeal">Read the case study <span aria-hidden="true">&rarr;</span></a>
       </div>
     </section>
 
@@ -526,26 +501,7 @@
       </div>
       <p class="lead">Modern pharmacy is a fast, credible pathway to enterprise growth and measurable business impact.</p>
       <p class="body-text">Prior authorization and specialty routing produce a financial ROI in months. That number comes out of one platform, not a department pilot. And the platform is scoped specifically to pharmacy, which is the version of governance a CFO already trusts.</p>
-
-      <div class="case-study">
-        <span class="mono cs-eyebrow">CASE STUDY · OCHSNER HEALTH</span>
-        <h3 class="cs-title">Reducing time-to-chair for infusion patients</h3>
-        <div class="cs-stats">
-          <div class="cs-stat">
-            <div class="cs-stat-num">9.3 min</div>
-            <div class="cs-stat-label">Prior auth time with Latent</div>
-          </div>
-          <div class="cs-stat">
-            <div class="cs-stat-num">+35%</div>
-            <div class="cs-stat-label">More cases per person, per day</div>
-          </div>
-          <div class="cs-stat">
-            <div class="cs-stat-num">40,000+</div>
-            <div class="cs-stat-label">Infusion authorizations completed</div>
-          </div>
-        </div>
-        <a class="cs-link" href="https://latenthealth.com/case-study/ochsner-infusion">Read the case study <span aria-hidden="true">&rarr;</span></a>
-      </div>
+      <p class="body-text">When the board asks how AI is improving the business, the strongest answer won&rsquo;t be a story about productivity. It will be a story about measurable revenue growth, financial performance, and better patient access, all backed by enterprise-scale results.</p>
     </section>
 
   </main>
